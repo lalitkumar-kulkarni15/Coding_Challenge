@@ -39,7 +39,13 @@
 
 * Please feel free to update / modify these properties according to your requirements.
 
-##  4) Technical Implementation details 
+## 4) Design approach 
+
+ * In order to constantly check the helth of the given application which is accessible over the http/https protocol, we need a task scheduler which can continously trigger a mechanism at configured period of interval.
+ * This scheduler needs to trigger a module which will actually hit the url and check the response received. Whatever is the response received then it should log it down using logger or on the console ( for current case study purpose ) .
+ * There are thus various schedulers available to use provided by various frameworks. We have chosen spring scheduler to do the job.
+
+## 5) Technical Implementation details 
 
 * The application is developed using the Spring boot framework.
 * Whenever the application is booted up , the spring scheduler starts invoking the health check mechanism at certain periodic intervals which is configured in the scheduler.
