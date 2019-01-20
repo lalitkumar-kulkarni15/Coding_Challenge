@@ -6,9 +6,11 @@
 
 ## Examples :- 
 
-* If the site/application is not responding or is not in a healthy state then the message "*** Site was unhealthy and did not respond at 2019-01-20T14:33:16.581***" is logged in the logs.
+* If the site/application is not responding or is not in a healthy state then the message 
+```*** Site was unhealthy and did not respond at 2019-01-20T14:33:16.581***" is logged in the logs.```
 
-* If the site/application is in a healthy state then the message "*** Site was healthy at  2019-01-20T14:33:16.581***" is logged in the logs.
+
+* If the site/application is in a healthy state then the message ```*** Site was healthy at  2019-01-20T14:33:16.581***" is logged in the logs.```
 
 * The site url is configurable and can be configured at the application.properties file. 
 
