@@ -16,6 +16,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  *
  */
 @SpringBootApplication
+// This annotation is required to enable the spring scheduling in the application  
 @EnableScheduling
 public class CodingChallengeApplication {
 

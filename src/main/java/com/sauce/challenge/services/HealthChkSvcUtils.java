@@ -2,6 +2,10 @@ package com.sauce.challenge.services;
 
 import java.time.LocalDateTime;
 
+/**
+ * @author owner
+ *
+ */
 public class HealthChkSvcUtils {
 
 	public static void recordHealthChkResults(final LocalDateTime dateTime,boolean siteStatus) {

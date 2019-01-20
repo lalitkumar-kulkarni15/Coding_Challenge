@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import com.sauce.challenge.business.IHealthChkSchedulerBuss;
 
 /**
+ * <p>This class is the entry point of the health check monitoring<p>
  * <p>This class has the responsibility of scheduling the invocation of the
  *  health check module periodically after certain interval which is configured
  *  using the annotation {@link @Scheduled}</p>
@@ -21,7 +22,7 @@ public class HealthChkScheduler {
 	// Instance of the health check business class.
 	IHealthChkSchedulerBuss healthChkSchedlrBuss;
 	
-	/**Below annotation is used to schedule the invocation of the 
+	/**Below annotation {@link @Scheduled}is used to schedule the invocation of the 
 	   health check after every sec */
 	
 	@Scheduled(fixedRateString = "1000")

@@ -7,6 +7,17 @@ import org.springframework.stereotype.Component;
 import com.sauce.challenge.services.HealthChkSvcUtils;
 import com.sauce.challenge.services.ISiteHealthChkSvc;
 
+/**
+ * <p>This class has the responsibility to orchestrate the health check monitoring flow </p>
+ * <p>It first invokes the siteHealthChkSvc service {@code SiteHealthChkSvcImpl} to get
+ * the status of the health, then it invokes the {@code HealthChkSvcUtils} to log the status
+ * of the health check</p> 
+ * 
+ * @author owner
+ * @since 20-01-2019
+ * @version 1.0
+ *
+ */
 @Component
 public class HealthChkSchedulerBussImpl implements IHealthChkSchedulerBuss {
 
