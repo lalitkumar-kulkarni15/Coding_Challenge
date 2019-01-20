@@ -47,8 +47,10 @@
 
 ## 5) Technical Implementation details 
 
-* The application is developed using the Spring boot framework.
-* Whenever the application is booted up , the spring scheduler starts invoking the health check mechanism at certain periodic intervals which is configured in the scheduler.
+* The application is developed using JDK 8 and the Spring boot framework.
+* The design and code of the application is kept very easy, so that any developer can understand very quickly.
+* Helpfull java docs is present in the code base  to guide the user about the approach and the code written.
+* So to start with ,whenever the application is booted up , the spring scheduler starts invoking the health check mechanism at certain periodic intervals which is configured in the scheduler.
 * This scheduler runs continuously until it is stopped by bringing the server down.
 * The health check module invokes the site/application which is accessible over http/https by hitting the url for a finite amount of time i.e. timeout which is configured inside the application.properties. 
 * It gets the status code as a part of response . i.e. It receives the status code 200 if the site is active or it may receive an exception or any other error code other than 200 in case the site is down or not available. 
