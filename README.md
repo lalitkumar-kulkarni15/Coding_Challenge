@@ -1,9 +1,13 @@
 # Coding_Challenge
 
 ## 1) What is the intent of this project module ? 
-
-* This project is a constantly running service which constantly monitors the health of the desired website / application which is accessible over the http/https protocol and thus logs the health status of the same appropriately along with the timestamp. 
-
+ 
+* Suppose If we have an application running on localhost with the url ```http://localhost:12345```. or any application site for that matter ex : ```https://www.google.in```
+* And if the objective of the user is to monitor the health of this site and log the statistics periodically after certain time interval. In such scenario this is a perfect app that could be of great use.
+* This application is a constantly running service which constantly monitors the health of the desired website / application which is accessible over the http/https protocol.
+* It then logs the health status of the same appropriately along with the timestamp.
+* This statistical data which is logged is then fed to the analyser for analysis.
+ 
 ## Examples :- 
 
 * If the site/application is not responding or is not in a healthy state then the message 
@@ -16,6 +20,7 @@
 
 ## 2) How to build and run the project?
 
+* Firstly please download the source code to your local IDE ( eclipse or intellij or any ide of your choise ) .
 * In order to build the project please run the maven 'clean install' which will compile the source code and also run the test cases. It will also take care of the dependencies.
 
 * The application is build using spring boot , thus please open the 'CodingChallengeApplication.java' class and run the same. 
