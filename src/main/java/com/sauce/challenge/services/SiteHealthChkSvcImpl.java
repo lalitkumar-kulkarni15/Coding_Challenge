@@ -5,6 +5,9 @@ import java.net.URL;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
 import com.sauce.challenge.exception.HealthCheckException;
+import static com.sauce.challenge.constants.ICommonConstants.HEAD;
+import static com.sauce.challenge.constants.ICommonConstants.HTTP;
+import static com.sauce.challenge.constants.ICommonConstants.HTTPS;
 
 /**
  * 
@@ -47,14 +50,14 @@ public class SiteHealthChkSvcImpl implements ISiteHealthChkSvc {
 	private boolean invokeSite(String url,int timeout) {
 		
 		// URL of the site.
-		url = url.replaceFirst("https", "http"); 
+		url = url.replaceFirst(HTTPS, HTTP); 
 
 	    try {
 	    	
 	        final HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
 	        connection.setConnectTimeout(timeout);
 	        connection.setReadTimeout(timeout);
-	        connection.setRequestMethod("HEAD");
+	        connection.setRequestMethod(HEAD);
 	        
 	        int responseCode = connection.getResponseCode();
 	        
