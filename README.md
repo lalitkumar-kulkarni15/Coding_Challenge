@@ -38,6 +38,8 @@ Examples :-
 4) The health check module invokes the site/application which is accessible over http/https by hitting the url for a finite amount of time i.e. timeout which is configured inside the application.properties. 
 5) It gets the status code as a part of response . i.e. It receives the status code 200 if the site is active or it may receive an exception or any other error code other than 200 in case the site is down or not available. 
 6) This result is logged in the logger( currently console ) with the current timestamp for the record.
+7) For more details , please refer to the javadocs mentioned in the source code.
+8) The code contains sufficient test cases which is required to test the source code.
 
  
 
