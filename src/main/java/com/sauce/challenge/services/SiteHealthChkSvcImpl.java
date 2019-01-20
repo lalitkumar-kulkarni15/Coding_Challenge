@@ -2,14 +2,30 @@ package com.sauce.challenge.services;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Optional;
 import org.springframework.stereotype.Service;
+import com.sauce.challenge.exception.HealthCheckException;
 
 @Service
 public class SiteHealthChkSvcImpl implements ISiteHealthChkSvc {
 	
-	public boolean checkSiteHealth( String url, int timeout) {
+	public boolean checkSiteHealth( String url, int timeout) throws HealthCheckException {
 		
-	    url = url.replaceFirst("https", "http"); 
+		Optional<String> urlStr = Optional.ofNullable(url);
+		
+		if(urlStr.isPresent()) {
+			
+			return invokeSite(url,timeout);
+			
+		} else {
+			throw new HealthCheckException("Url passed is null");
+		}
+	    
+	}
+	
+	private boolean invokeSite(String url,int timeout) {
+		
+		url = url.replaceFirst("https", "http"); 
 
 	    try {
 	    	

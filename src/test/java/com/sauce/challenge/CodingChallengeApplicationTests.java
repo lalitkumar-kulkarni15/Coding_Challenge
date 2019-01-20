@@ -1,4 +1,4 @@
-package com.sauce.challenge.CodingChallenge;
+package com.sauce.challenge;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

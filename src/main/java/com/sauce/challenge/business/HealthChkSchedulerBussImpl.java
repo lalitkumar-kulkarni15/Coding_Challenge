@@ -24,7 +24,11 @@ public class HealthChkSchedulerBussImpl implements IHealthChkSchedulerBuss {
 	
 	public void orchestrateSiteHealthChk() {
 		
-		boolean siteHEalthSts = siteHealthChkSvc.checkSiteHealth(siteUrl,timeout);
-		rcrdHealthChkSvc.recordHealthChkResults(LocalDateTime.now(), siteHEalthSts);
+		try {
+			boolean siteHealthSts = siteHealthChkSvc.checkSiteHealth(siteUrl,timeout);
+			rcrdHealthChkSvc.recordHealthChkResults(LocalDateTime.now(), siteHealthSts);
+		} catch(Exception exception) {
+			exception.printStackTrace();
+		}
 	}
 }
