@@ -1,12 +1,10 @@
 package com.sauce.challenge.services;
 
 import java.time.LocalDateTime;
-import org.springframework.stereotype.Service;
 
-@Service
-public class RcrdHealthChkSvcImpl implements IRcrdHealthChkSvc {
+public class HealthChkSvcUtils {
 
-	public void recordHealthChkResults(final LocalDateTime dateTime,boolean siteStatus) {
+	public static void recordHealthChkResults(final LocalDateTime dateTime,boolean siteStatus) {
 		
 		if(siteStatus) {
 			System.out.println("*** Site was healthy at "+dateTime +"***");
