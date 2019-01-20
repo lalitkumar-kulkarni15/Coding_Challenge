@@ -30,6 +30,8 @@ Examples :-
 
 - It also contains some properties like timeout=5000 which holds the value of site timeout after which the application can mark the health check failed.
 
+- Plase feel free to update / modify these properties according to your requirements.
+
 # 4) Technical Implementation details 
 
 1) The application is developed using the Spring boot framework.
