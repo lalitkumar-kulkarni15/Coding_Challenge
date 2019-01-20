@@ -12,7 +12,7 @@
 
 * If the site/application is in a healthy state then the message ```*** Site was healthy at  2019-01-20T14:33:16.581***" is logged in the logs.```
 
-* The site url is configurable and can be configured at the application.properties file. 
+* The site url is configurable and can be configured at the application.properties file. ```siteUrl=http://localhost:12345```
 
 ## 2) How to build and run the project?
 
