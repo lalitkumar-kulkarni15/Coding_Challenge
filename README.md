@@ -58,5 +58,19 @@
 * For more details , please refer to the javadocs mentioned in the source code.
 * The code contains sufficient test cases which is required to test the source code.
 
+## Logs monitoring logic ( Extension to this code ) 
+
+ * Due to shortage of time , couldn't manage to add certain parts in the given application code regarding the smart logging of the 
+ monitoring app. Thus I am mentioning the high level logic here which could be implemented in the same.
+ * As the intent of this app is to constantly monitor the website / application on the http and generate report, various monitoring tools like splunk could be used to create the dashboards which will help to show the visual representation of the health status. 
+ Ex : A dashboard which shows the time interval and the percentage of failure and success during tat time interval.So the logic is 
+ to hit the website finite number of times during 1 sec and then the result could be stored in a collection. After the finite number of hit requests we can calculate the percentage failure and success for that particular time range and then log this. The splunk query can then pick up this data using the keywords and generate the dashboards. ( visual representation for the support team to analyse ) .
+ * Also alerts can be generated in splunk using the data which is logged for ex : If the site is continously failing for continued timeframes like say if it fails continously for 5 consecutive time frames then an alert could be generated to notify the team.
+ 
+ * Please get in touch with me in case any of the mentioned part is unclear or you would want to know more about it.
+ 
+ Thank you ..
+ 
+ Lalit
  
 
