@@ -38,6 +38,7 @@
 * It also contains some properties like timeout=5000 which holds the value of site timeout after which the application can mark the health check failed.
 
 * Please feel free to update / modify these properties according to your requirements.
+*Please note that the values of timeout and frequency of hitting the website are configured arbitrarily as of now. However this needs to be configured as per the requirements.The intent is to just portray the approach to solve the problem.
 
 ## 4) Design approach 
 
